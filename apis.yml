@@ -1,23 +1,68 @@
 aid: atlantic-industrial-group
+
 name: Atlantic Industrial Group
-description: 'Atlantic Industrial Group is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+description: Atlantic Industrial Group (AIG) is a vertically and horizontally integrated holding company focusing on logistics, propulsion, software,
+  and aerospace. It acquires and develops superior products and efficient manufacturing assets, including VTOL drones and industrial chemicals.
+  The company operates through subsidiaries such as AIG Aerospace and offers services in fabrication, manufacturing engineering, logistics technology,
+  industrial chemicals, and scientific innovation.
+
 url: https://raw.githubusercontent.com/api-evangelist/atlantic-industrial-group/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Holding
+- Aerospace
+- Logistics
+- Manufacturing
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/atlantic-industrial-group-hosts.yml
+- type: Leadership
+  url: https://atlanticindustrialgroup.com/team/
+- type: DomainSecurity
+  url: security/atlantic-industrial-group-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://atlanticindustrialgroup.com/
+
+apis:
+- name: Atlantic Industrial Group API
+  description: API information not publicly documented.
+  humanURL: https://atlanticindustrialgroup.com/
+  baseURL: null
+  aid: atlantic-industrial-group:atlantic-industrial-group-api
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI or other machine-readable spec found at the API host or documentation pages.
+  evidence:
+  - url: https://api.atlanticindustrialgroup.com/openapi.json
+    status: DNS resolution failed
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
